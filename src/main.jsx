@@ -8,7 +8,7 @@ import Login from './components/connexion/Login.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* <Register /> */}
-    <Login/>
+    <Register />
+    {/* <Login/> */}
   </StrictMode>,
 )

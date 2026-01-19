@@ -6,7 +6,7 @@ function Footer() {
     <footer className='absolute bottom-0 items-center w-screen py-3 border-t'>
         <div className='container flex justify-around max-sm:flex-col max-sm:text-center'>
             <div>
-                <span className='text-xs font-semibold text-center text-gray-300 xl:mx-56'>
+                <span className='text-xs font-semibold text-center text-gray-400 xl:mx-96'>
                     © 2026 myChat
                 </span>
             </div>
