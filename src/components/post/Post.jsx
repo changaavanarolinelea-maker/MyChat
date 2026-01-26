@@ -25,21 +25,22 @@ function Post() {
     const addEmojis = ()=>{
         setNum ( num+1)
     }
-    const [commentaire, setCommentaire] = useState('')
+    const [commentaire, setCommentaire] = useState(0)
     const addComment = ()=>{
         setCommentaire ( commentaire+1)
     }
-  return (
-    // Partie reserver au post de l'utilisateur
-     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48'>
+    
+  return <>
+     {/* Partie reserver au post de l'utilisateur */}
+      <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
             <div className='grow '>
-                    <div className='grid-flow-col w-full h-full bg-zinc-50 border'>
+                    <div className='w-full h-full grid-flow-col border bg-zinc-50'>
                         <div className='max-sm:w-full ' >
                           <div className='bg-white p-'>
-                              <div className='p-5 flex items-center justify-between gap-5 '>
+                              <div className='flex items-center justify-between gap-5 p-5 '>
                                    <div className='flex items-center gap-5'>
                                         <div>
-                                            <span className='bg-purple-600 px-3 py-3 text-white font-semibold rounded-full w-45 '>Cl</span>
+                                            <span className='px-3 py-3 font-semibold text-white bg-purple-600 rounded-full w-45 '>CM</span>
                                         </div>
                                         <div>
                                             <h4 className='font-bold'>Classickid Morel</h4>
@@ -53,33 +54,97 @@ function Post() {
                               </div>
                               <p className='px-6 py-2 font-semibold text-gray-400'>Test oo</p>
                           </div>
-                          <div className='flex my-4 justify-center '>
+                          {/* <div className='flex justify-center my-4 '>
                               <img src={Postpic} alt="" className='w-[2] object-center h-[50vh] object-contain p-' />
-                          </div>
+                          </div> */}
                         </div>
-                        <div className='flex justify-between px-2 py-3 bg-white border-t border-b'>
+                        <div className='flex justify-between gap-2 px-2 py-3 bg-white border-t border-b'>
                                 <span className='text-gray-400'>👍{num}</span>
-                                <a href="">{commentaire}commentaires</a>
+                                <span className='transition-all cursor-pointer hover:underline'>{commentaire} commentaires</span>
+                               
                         </div>
-                         <div className='flex justify-around items-center p-4'>
-                                <div>
-                                    <span onClick={addEmojis}>👍Reagir</span>
+                         <div className='flex items-center justify-around w-full p-4 bg-white'>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i>👍</i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Reagir
+                                    </span>
                                 </div>
-                                <div className=' cursor-pointer bg-slate-500 '>
-                                    <span onClick={addEmojis}> 
-                                       <i class="fa-regular fa-heart "></i> 
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                  <i class="fa-regular fa-heart "></i> 
+                                    <span onClick={addEmojis} className='max-sm:hidden'> 
                                        J'aime 
                                      </span>
                                 </div>
-                                <div>
-                                    <span onClick={setCommentaire}>
-                                        <i class="fa-solid fa-comment"></i>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i class="fa-solid fa-comment"></i>
+                                    <span onClick={addComment} className='max-sm:hidden'>
                                         Commenter
                                     </span>
                                 </div>
-                                <div>
-                                    <span onClick={addEmojis}>
-                                        <i class="fa-solid fa-share"></i>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i class="fa-solid fa-share"></i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Partager
+                                    </span>
+                                </div>
+                        </div>
+                </div>
+            </div>    
+     </section>
+      <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+            <div className='grow '>
+                    <div className='w-full h-full grid-flow-col border bg-zinc-50'>
+                        <div className='max-sm:w-full ' >
+                          <div className='bg-white p-'>
+                              <div className='flex items-center justify-between gap-5 p-5 '>
+                                   <div className='flex items-center gap-5'>
+                                        <div>
+                                            <span className='px-3 py-3 font-semibold text-white bg-purple-600 rounded-full w-45 '>CM</span>
+                                        </div>
+                                        <div>
+                                            <h4 className='font-bold'>Classickid Morel</h4>
+                                            <span className='font-semibold text-gray-400 text-'>{now} a {heure}</span>
+                                        </div>
+                                   </div>
+                                    
+                                    <div>
+                                         <i class="fa-solid fa-caret-down cursor-pointer"></i>
+                                    </div>
+                              </div>
+                              <p className='px-6 py-2 font-semibold text-gray-400'>Test oo</p>
+                          </div>
+                          {/* <div className='flex justify-center my-4 '>
+                              <img src={Postpic} alt="" className='w-[2] object-center h-[50vh] object-contain p-' />
+                          </div> */}
+                        </div>
+                        <div className='flex justify-between gap-2 px-2 py-3 bg-white border-t border-b'>
+                                <span className='text-gray-400'>👍{num}</span>
+                                <span className='transition-all cursor-pointer hover:underline'>{commentaire} commentaires</span>
+                               
+                        </div>
+                         <div className='flex items-center justify-around w-full p-4 bg-white'>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i>👍</i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Reagir
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                  <i class="fa-regular fa-heart "></i> 
+                                    <span onClick={addEmojis} className='max-sm:hidden'> 
+                                       J'aime 
+                                     </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i class="fa-solid fa-comment"></i>
+                                    <span onClick={addComment} className='max-sm:hidden'>
+                                        Commenter
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i class="fa-solid fa-share"></i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
                                         Partager
                                     </span>
                                 </div>
@@ -88,7 +153,372 @@ function Post() {
                     </div>
             </div>
      </section>
-  )
+     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 antialiased'>
+            <div className='grow '>
+                    <div className='w-full h-full grid-flow-col border bg-zinc-50'>
+                        <div className='max-sm:w-full ' >
+                          <div className='bg-white p-'>
+                              <div className='flex items-center justify-between gap-5 p-5 '>
+                                   <div className='flex items-center gap-5'>
+                                        <div>
+                                            <span className='px-3 py-3 font-semibold text-white bg-purple-600 rounded-full w-45 '>CM</span>
+                                        </div>
+                                        <div>
+                                            <h4 className='font-bold'>Classickid Morel</h4>
+                                            <span className='font-semibold text-gray-400 text-'>{now} a {heure}</span>
+                                        </div>
+                                   </div>
+                                    
+                                    <div>
+                                         <i class="fa-solid fa-caret-down cursor-pointer"></i>
+                                    </div>
+                              </div>
+                              <p className='px-6 py-2 font-semibold text-gray-400'>Test oo</p>
+                          </div>
+                          <div className='flex justify-center my-4 '>
+                              <img src={Postpic} alt="" className='w-[2] object-center h-[50vh] object-contain p-' />
+                          </div>
+                        </div>
+                        <div className='flex justify-between gap-2 px-2 py-3 bg-white border-t border-b'>
+                                <span className='text-gray-400'>👍{num}</span>
+                                <span className='transition-all cursor-pointer hover:underline'>{commentaire} commentaires</span>   
+                        </div>
+                         <div className='flex items-center justify-around w-full p-4 bg-white'>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i>👍</i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Reagir
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                  <i class="fa-regular fa-heart "></i> 
+                                    <span onClick={addEmojis} className='max-sm:hidden'> 
+                                       J'aime 
+                                     </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i class="fa-solid fa-comment"></i>
+                                    <span onClick={addComment} className='max-sm:hidden'>
+                                        Commenter
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i class="fa-solid fa-share"></i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Partager
+                                    </span>
+                                </div>
+                        </div>
+                       
+                    </div>
+            </div>
+     </section>
+     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+            <div className='grow '>
+                    <div className='w-full h-full grid-flow-col border bg-zinc-50'>
+                        <div className='max-sm:w-full ' >
+                          <div className='bg-white p-'>
+                              <div className='flex items-center justify-between gap-5 p-5 '>
+                                   <div className='flex items-center gap-5'>
+                                        <div>
+                                            <span className='px-3 py-3 font-semibold text-white bg-purple-600 rounded-full w-45 '>CM</span>
+                                        </div>
+                                        <div>
+                                            <h4 className='font-bold'>Classickid Morel</h4>
+                                            <span className='font-semibold text-gray-400 text-'>{now} a {heure}</span>
+                                        </div>
+                                   </div>
+                                    
+                                    <div>
+                                         <i class="fa-solid fa-caret-down cursor-pointer"></i>
+                                    </div>
+                              </div>
+                              <p className='px-6 py-2 font-semibold text-gray-400'>Test oo</p>
+                          </div>
+                          {/* <div className='flex justify-center my-4 '>
+                              <img src={Postpic} alt="" className='w-[2] object-center h-[50vh] object-contain p-' />
+                          </div> */}
+                        </div>
+                        <div className='flex justify-between gap-2 px-2 py-3 bg-white border-t border-b'>
+                                <span className='text-gray-400'>👍{num}</span>
+                                <span className='transition-all cursor-pointer hover:underline'>{commentaire} commentaires</span>
+                               
+                        </div>
+                         <div className='flex items-center justify-around w-full p-4 bg-white'>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i>👍</i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Reagir
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                  <i class="fa-regular fa-heart "></i> 
+                                    <span onClick={addEmojis} className='max-sm:hidden'> 
+                                       J'aime 
+                                     </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i class="fa-solid fa-comment"></i>
+                                    <span onClick={addComment} className='max-sm:hidden'>
+                                        Commenter
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i class="fa-solid fa-share"></i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Partager
+                                    </span>
+                                </div>
+                        </div>
+                       
+                    </div>
+            </div>
+     </section>
+     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+            <div className='grow '>
+                    <div className='w-full h-full grid-flow-col border bg-zinc-50'>
+                        <div className='max-sm:w-full ' >
+                          <div className='bg-white p-'>
+                              <div className='flex items-center justify-between gap-5 p-5 '>
+                                   <div className='flex items-center gap-5'>
+                                        <div>
+                                            <span className='px-3 py-3 font-semibold text-white bg-purple-600 rounded-full w-45 '>CM</span>
+                                        </div>
+                                        <div>
+                                            <h4 className='font-bold'>Classickid Morel</h4>
+                                            <span className='font-semibold text-gray-400 text-'>{now} a {heure}</span>
+                                        </div>
+                                   </div>
+                                    
+                                    <div>
+                                         <i class="fa-solid fa-caret-down cursor-pointer"></i>
+                                    </div>
+                              </div>
+                              <p className='px-6 py-2 font-semibold text-gray-400'>Test oo</p>
+                          </div>
+                          <div className='flex justify-center my-4 '>
+                              <img src={Postpic} alt="" className='w-[2] object-center h-[50vh] object-contain p-' />
+                          </div>
+                        </div>
+                        <div className='flex justify-between gap-2 px-2 py-3 bg-white border-t border-b'>
+                                <span className='text-gray-400'>👍{num}</span>
+                                <span className='transition-all cursor-pointer hover:underline'>{commentaire} commentaires</span>
+                               
+                        </div>
+                         <div className='flex items-center justify-around w-full p-4 bg-white'>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i>👍</i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Reagir
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                  <i class="fa-regular fa-heart "></i> 
+                                    <span onClick={addEmojis} className='max-sm:hidden'> 
+                                       J'aime 
+                                     </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i class="fa-solid fa-comment"></i>
+                                    <span onClick={addComment} className='max-sm:hidden'>
+                                        Commenter
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 text-center cursor-pointer focus:w-44 focus:rounded-md hover:px-6 max-sm:hover:w-auto hover:bg-gray-200'>
+                                    <i class="fa-solid fa-share"></i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Partager
+                                    </span>
+                                </div>
+                        </div>
+                       
+                    </div>
+            </div>
+     </section>
+     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+            <div className='grow '>
+                    <div className='w-full h-full grid-flow-col border bg-zinc-50'>
+                        <div className='max-sm:w-full ' >
+                          <div className='bg-white p-'>
+                              <div className='flex items-center justify-between gap-5 p-5 '>
+                                   <div className='flex items-center gap-5'>
+                                        <div>
+                                            <span className='px-3 py-3 font-semibold text-white bg-purple-600 rounded-full w-45 '>CM</span>
+                                        </div>
+                                        <div>
+                                            <h4 className='font-bold'>Classickid Morel</h4>
+                                            <span className='font-semibold text-gray-400 text-'>{now} a {heure}</span>
+                                        </div>
+                                   </div>
+                                    
+                                    <div>
+                                         <i class="fa-solid fa-caret-down cursor-pointer"></i>
+                                    </div>
+                              </div>
+                              <p className='px-6 py-2 font-semibold text-gray-400'>Test oo</p>
+                          </div>
+                          <div className='flex justify-center my-4 '>
+                              <img src={Postpic} alt="" className='w-[2] object-center h-[50vh] object-contain p-' />
+                          </div>
+                        </div>
+                        <div className='flex justify-between gap-2 px-2 py-3 bg-white border-t border-b'>
+                                <span className='text-gray-400'>👍{num}</span>
+                                <span className='transition-all cursor-pointer hover:underline'>{commentaire} commentaires</span>
+                               
+                        </div>
+                         <div className='flex items-center justify-around w-full p-4 bg-white'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                    <i>👍</i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Reagir
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                  <i class="fa-regular fa-heart "></i> 
+                                    <span onClick={addEmojis} className='max-sm:hidden'> 
+                                       J'aime 
+                                     </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                    <i class="fa-solid fa-comment"></i>
+                                    <span onClick={addComment} className='max-sm:hidden'>
+                                        Commenter
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                    <i class="fa-solid fa-share"></i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Partager
+                                    </span>
+                                </div>
+                        </div>
+                       
+                    </div>
+            </div>
+     </section>
+     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+            <div className='grow '>
+                    <div className='w-full h-full grid-flow-col border bg-zinc-50'>
+                        <div className='max-sm:w-full ' >
+                          <div className='bg-white p-'>
+                              <div className='flex items-center justify-between gap-5 p-5 '>
+                                   <div className='flex items-center gap-5'>
+                                        <div>
+                                            <span className='px-3 py-3 font-semibold text-white bg-purple-600 rounded-full w-45 '>CM</span>
+                                        </div>
+                                        <div>
+                                            <h4 className='font-bold'>Classickid Morel</h4>
+                                            <span className='font-semibold text-gray-400 text-'>{now} a {heure}</span>
+                                        </div>
+                                   </div>
+                                    
+                                    <div>
+                                         <i class="fa-solid fa-caret-down cursor-pointer"></i>
+                                    </div>
+                              </div>
+                              <p className='px-6 py-2 font-semibold text-gray-400'>Test oo</p>
+                          </div>
+                          {/* <div className='flex justify-center my-4 '>
+                              <img src={Postpic} alt="" className='w-[2] object-center h-[50vh] object-contain p-' />
+                          </div> */}
+                        </div>
+                        <div className='flex justify-between gap-2 px-2 py-3 bg-white border-t border-b'>
+                                <span className='text-gray-400'>👍{num}</span>
+                                <span className='transition-all cursor-pointer hover:underline'>{commentaire} commentaires</span>
+                               
+                        </div>
+                         <div className='flex items-center justify-around w-full p-4 bg-white'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                    <i>👍</i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Reagir
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                  <i class="fa-regular fa-heart "></i> 
+                                    <span onClick={addEmojis} className='max-sm:hidden'> 
+                                       J'aime 
+                                     </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                    <i class="fa-solid fa-comment"></i>
+                                    <span onClick={addComment} className='max-sm:hidden'>
+                                        Commenter
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                    <i class="fa-solid fa-share"></i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Partager
+                                    </span>
+                                </div>
+                        </div>
+                       
+                    </div>
+            </div>
+     </section>
+     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+            <div className='grow '>
+                    <div className='w-full h-full grid-flow-col border bg-zinc-50'>
+                        <div className='max-sm:w-full ' >
+                          <div className='bg-white p-'>
+                              <div className='flex items-center justify-between gap-5 p-5 '>
+                                   <div className='flex items-center gap-5'>
+                                        <div>
+                                            <span className='px-3 py-3 font-semibold text-white bg-purple-600 rounded-full w-45 '>CM</span>
+                                        </div>
+                                        <div>
+                                            <h4 className='font-bold'>Classickid Morel</h4>
+                                            <span className='font-semibold text-gray-400 text-'>{now} a {heure}</span>
+                                        </div>
+                                   </div>
+                                    
+                                    <div>
+                                         <i class="fa-solid fa-caret-down cursor-pointer"></i>
+                                    </div>
+                              </div>
+                              <p className='px-6 py-2 font-semibold text-gray-400'>Test oo</p>
+                          </div>
+                          <div className='flex justify-center my-4 '>
+                              <img src={Postpic} alt="" className='w-[2] object-center h-[50vh] object-contain p-' />
+                          </div>
+                        </div>
+                        <div className='flex justify-between gap-2 px-2 py-3 bg-white border-t border-b'>
+                                <span className='text-gray-400'>👍{num}</span>
+                                <span className='transition-all cursor-pointer hover:underline'>{commentaire} commentaires</span>
+                               
+                        </div>
+                         <div className='flex items-center justify-around w-full p-4 bg-white'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                    <i>👍</i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Reagir
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                  <i class="fa-regular fa-heart "></i> 
+                                    <span onClick={addEmojis} className='max-sm:hidden'> 
+                                       J'aime 
+                                     </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                    <i class="fa-solid fa-comment"></i>
+                                    <span onClick={addComment} className='max-sm:hidden'>
+                                        Commenter
+                                    </span>
+                                </div>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                    <i class="fa-solid fa-share"></i>
+                                    <span onClick={addEmojis} className='max-sm:hidden'>
+                                        Partager
+                                    </span>
+                                </div>
+                        </div>
+                       
+                    </div>
+            </div>
+     </section>
+  </>
 }
 
 export default Post
