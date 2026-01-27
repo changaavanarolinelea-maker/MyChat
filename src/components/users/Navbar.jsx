@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SearchBar from './SearchBar'
 import Logo from '../../images/logo.jpg'
 import ProImg from '../../images/photo_2024-11-26_10-29-53.jpg'
 import Sidebar from './Sidebar'
 
 function Navbar() {
+    const [close, setClose]=useState(true)
+    
   return <>
         <div className='fixed top-0 z-50 bg-white '>
            <img src={Logo} alt="" className='object-contain h-16 border w-72'/>
@@ -13,7 +15,7 @@ function Navbar() {
             <nav className="flex items-center justify-between h-full px-4">
 
                 {/* Burger (mobile only) */}
-                <i className="text-2xl text-gray-500 cursor-pointer fa-solid fa-bars md:hidden " />
+                <i className="text-2xl text-gray-500 cursor-pointer fa-solid fa-bars md:hidden" onClick={()=>setClose(!close)}/>
 
                 {/* Search */}
                 <div className="">
@@ -30,7 +32,9 @@ function Navbar() {
             </nav>
         </header>
         <main>
+            {close &&
             <Sidebar/>
+            }
         </main>
   </>
 }

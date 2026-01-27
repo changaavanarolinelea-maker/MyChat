@@ -37,65 +37,7 @@ function Profit() {
         
             <Navbar/>
     
-         {/* <main className='flex my-28 flex-col mx-8 max-sm:w-auto md:ml-[16vw] md:w-[82vw]  '>
-           <section className='flex  shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full'>
-                <div className='grid grid-cols-subgrid'>
-                     <div className="flex items-center gap-6 p-5 max-sm:h-full max-sm:flex-col">
-                        <div className=''>
-                            <img src='' alt="profile"  className="object-cover w-40 h-40 border-4 rounded-full "/>
-                        </div>
-                            <div className='flex flex-col'>
-                                <span className='p-2 text-gray-400'> @Morel</span>
-                                <span className='p-2 text-green-500'>En ligne</span>
-                            </div>
-                            <div>
-                                <div className=''>
-                                <button className='p-2 transition-colors rounded-sm text-[#3f87f5] bg-[#3f87f51A] hover:text-white hover:bg-[#3f87f5] mx-2'>Contact</button>
-                                <button className='p-2 transition-shadow text-[#886CFF] bg-[#886CFF1A] hover:text-white hover:bg-[#886CFF] rounded-sm'>Modifier</button>
-                            </div>
-                            </div>
-                            
-                      
-                        <div className='grid place-content-end'>
-                            <ul className=''>
-                                <li>
-                                    <i class="fa-regular fa-envelope"></i>
-                                    <span>Email : {}</span>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-phone-flip"></i>
-                                    <span>Phone :</span>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-location-crosshairs"></i>
-                                    <span>Location :</span>
-                                </li>
-                                
-                            </ul>
-                            <div>
-                                <a href="">
-                                <i class="fa-brands fa-square-facebook"></i>
-                                </a>
-                                <a href="">
-                                <i class="fa-brands fa-twitter"></i>
-                                </a>
-                                <a href="">
-                                <i class="fa-brands fa-behance"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fa-brands fa-dribbble"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div >
-                        
-                            
-                        </div>
-                    </div>
-                </div>    
-            </section> 
-        </main> */}
-        <main className="my-28 mx-4 md:ml-[16vw] md:w-[82vw]">
+        <main className="my-28 mx-4 md:ml-[16vw] ">
             <section className="w-full border rounded-lg shadow-md">
                     <div className="flex max-sm:flex-col">
 
@@ -142,7 +84,7 @@ function Profit() {
                         </ul>
 
                         {/* SOCIAL ICONS */}
-                        <div className="flex gap-4 mt-6 text-xl">
+                        <div className="flex gap-4 mt-6 text-xl sm:flex-row md:flex-row">
                             <a href="#"><i className="text-gray-500 fa-brands fa-square-facebook hover:text-black"></i></a>
                             <a href="#"><i className="text-gray-500 fa-brands fa-twitter hover:text-black"></i></a>
                             <a href="#"><i className="text-gray-500 fa-brands fa-behance hover:text-black"></i></a>
@@ -199,11 +141,10 @@ function Profit() {
                                 </div>
                          </div>
                     </div>
-                  
                 </div>
             </section>
-            <section className='shadow-xl rounded-lg max-sm:mx-[8px] max-sm:w-full my-8 md:mx-auto w-2/3 border'>
-                        <div className='grow '>
+            <section className='shadow-xl rounded-lg max-sm:mx-[8px] max-sm:w-full my-8  w-2/3 border max-lg:w-full '>
+                        <div className='grow-[50vw] '>
                                 <div className='w-full h-full grid-flow-col bg-zinc-50'>
                                     <div className='max-sm:w-full ' >
                                       <div className='bg-white p-'>
@@ -224,41 +165,38 @@ function Profit() {
                                           </div>
                                           <p className='px-6 py-2 font-semibold text-gray-400'>Test oo</p>
                                       </div>
-                                      
                                     </div>
                                     <div className='flex justify-between gap-2 px-2 py-3 bg-white border-t border-b'>
                                             <span className='text-gray-400'>👍{num}</span>
                                             <span className='transition-all cursor-pointer hover:underline'>{commentaire} commentaires</span>
-                                           
                                     </div>
-                                     <div className='flex items-center justify-around w-full p-4 bg-white'>
-                                            <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
-                                                <i>👍</i>
-                                                <span onClick={addEmojis} className='max-sm:hidden'>
-                                                    Reagir
-                                                </span>
-                                            </div>
-                                            <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
-                                              <i class="fa-regular fa-heart "></i> 
-                                                <span onClick={addEmojis} className='max-sm:hidden'> 
-                                                   J'aime 
-                                                 </span>
-                                            </div>
-                                            <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
-                                                <i class="fa-solid fa-comment"></i>
-                                                <span onClick={addComment} className='max-sm:hidden'>
-                                                    Commenter
-                                                </span>
-                                            </div>
-                                            <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
-                                                <i class="fa-solid fa-share"></i>
-                                                <span onClick={addEmojis} className='max-sm:hidden'>
-                                                    Partager
-                                                </span>
-                                            </div>
+                                    <div className='flex items-center justify-around w-full p-4 bg-white'>
+                                        <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:w-auto max-sm:hover:w-auto'>
+                                            <i>👍</i>
+                                            <span onClick={addEmojis} className='max-sm:hidden'>
+                                                 Reagir
+                                            </span>
+                                        </div>
+                                    <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:w-auto max-sm:hover:w-auto'>
+                                        <i class="fa-regular fa-heart "></i> 
+                                        <span onClick={addEmojis} className='max-sm:hidden'> 
+                                             J'aime 
+                                        </span>
                                     </div>
-                                   
+                                    <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:w-auto max-sm:hover:w-auto'>
+                                        <i class="fa-solid fa-comment"></i>
+                                        <span onClick={addComment} className='max-sm:hidden'>
+                                             Commenter
+                                        </span>
+                                    </div>
+                                    <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:w-auto max-sm:hover:w-auto'>
+                                        <i class="fa-solid fa-share"></i>
+                                         <span onClick={addEmojis} className='max-sm:hidden'>
+                                              Partager
+                                          </span>
+                                    </div>
                                 </div>
+                            </div>
                         </div>
                  </section>
      </main>

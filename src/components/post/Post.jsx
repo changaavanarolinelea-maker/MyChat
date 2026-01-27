@@ -29,7 +29,7 @@ function Post() {
     const addComment = ()=>{
         setCommentaire ( commentaire+1)
     }
-    
+      const [drop,setDrop] = useState(false)
   return <>
      {/* Partie reserver au post de l'utilisateur */}
       <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
@@ -48,8 +48,21 @@ function Post() {
                                         </div>
                                    </div>
                                     
-                                    <div>
-                                         <i class="fa-solid fa-caret-down cursor-pointer"></i>
+                                    {drop  &&(
+                                        <div className=' p-2 bg-white rounded right-10 top-7 border '>
+                                            <div className='p-2'>
+                                                <i class="fa-regular fa-bookmark text-[#3F87F5] px-2"></i>
+                                                <span>Ajouter un favoris</span>
+                                            </div>
+                                            <div className='p-2'>
+                                                <i class="fa-solid fa-trash text-red-600 px-2"></i>
+                                                <span className='text-red-600' >Supprimer</span>
+                                            </div>
+
+                                        </div>
+                                    )}                          
+                                    <div className=''>
+                                         <i class="fa-solid fa-caret-down cursor-pointer hover:border hover:p-3 hover:rounded-md hover:shadow-[#3F87F5]" onClick={()=>setDrop(!drop)}></i>
                                     </div>
                               </div>
                               <p className='px-6 py-2 font-semibold text-gray-400'>Test oo</p>
@@ -107,9 +120,21 @@ function Post() {
                                             <span className='font-semibold text-gray-400 text-'>{now} a {heure}</span>
                                         </div>
                                    </div>
-                                    
+                                    {drop  &&(
+                                        <div className=' p-2 bg-white rounded right-10 top-7 border '>
+                                            <div className='p-2'>
+                                                <i class="fa-regular fa-bookmark text-[#3F87F5] px-2"></i>
+                                                <span>Ajouter un favoris</span>
+                                            </div>
+                                            <div className='p-2'>
+                                                <i class="fa-solid fa-trash text-red-600 px-2"></i>
+                                                <span className='text-red-600' >Supprimer</span>
+                                            </div>
+
+                                        </div>
+                                    )}     
                                     <div>
-                                         <i class="fa-solid fa-caret-down cursor-pointer"></i>
+                                         <i class="fa-solid fa-caret-down cursor-pointer hover:border hover:p-3 hover:rounded-md hover:shadow-[#3F87F5]" onClick={()=>setDrop(!drop)} ></i>
                                     </div>
                               </div>
                               <p className='px-6 py-2 font-semibold text-gray-400'>Test oo</p>
@@ -367,25 +392,25 @@ function Post() {
                                
                         </div>
                          <div className='flex items-center justify-around w-full p-4 bg-white'>
-                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:hover:w-auto'>
                                     <i>👍</i>
                                     <span onClick={addEmojis} className='max-sm:hidden'>
                                         Reagir
                                     </span>
                                 </div>
-                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:hover:w-auto'>
                                   <i class="fa-regular fa-heart "></i> 
                                     <span onClick={addEmojis} className='max-sm:hidden'> 
                                        J'aime 
                                      </span>
                                 </div>
-                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:hover:w-auto'>
                                     <i class="fa-solid fa-comment"></i>
                                     <span onClick={addComment} className='max-sm:hidden'>
                                         Commenter
                                     </span>
                                 </div>
-                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:hover:w-auto'>
                                     <i class="fa-solid fa-share"></i>
                                     <span onClick={addEmojis} className='max-sm:hidden'>
                                         Partager
@@ -428,25 +453,25 @@ function Post() {
                                
                         </div>
                          <div className='flex items-center justify-around w-full p-4 bg-white'>
-                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:hover:w-auto'>
                                     <i>👍</i>
                                     <span onClick={addEmojis} className='max-sm:hidden'>
                                         Reagir
                                     </span>
                                 </div>
-                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:hover:w-auto'>
                                   <i class="fa-regular fa-heart "></i> 
                                     <span onClick={addEmojis} className='max-sm:hidden'> 
                                        J'aime 
                                      </span>
                                 </div>
-                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:hover:w-auto'>
                                     <i class="fa-solid fa-comment"></i>
                                     <span onClick={addComment} className='max-sm:hidden'>
                                         Commenter
                                     </span>
                                 </div>
-                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:hover:w-auto'>
                                     <i class="fa-solid fa-share"></i>
                                     <span onClick={addEmojis} className='max-sm:hidden'>
                                         Partager
@@ -489,25 +514,25 @@ function Post() {
                                
                         </div>
                          <div className='flex items-center justify-around w-full p-4 bg-white'>
-                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:hover:w-auto'>
                                     <i>👍</i>
                                     <span onClick={addEmojis} className='max-sm:hidden'>
                                         Reagir
                                     </span>
                                 </div>
-                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:hover:w-auto'>
                                   <i class="fa-regular fa-heart "></i> 
                                     <span onClick={addEmojis} className='max-sm:hidden'> 
                                        J'aime 
                                      </span>
                                 </div>
-                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:hover:w-auto'>
                                     <i class="fa-solid fa-comment"></i>
                                     <span onClick={addComment} className='max-sm:hidden'>
                                         Commenter
                                     </span>
                                 </div>
-                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200'>
+                                <div className='flex items-center gap-3 py-2 cursor-pointer hover:rounded-md hover:px-6 tansition-all hover:w-44 hover:bg-gray-200 max-sm:hover:w-auto'>
                                     <i class="fa-solid fa-share"></i>
                                     <span onClick={addEmojis} className='max-sm:hidden'>
                                         Partager
