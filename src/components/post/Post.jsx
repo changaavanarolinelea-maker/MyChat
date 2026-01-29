@@ -32,7 +32,7 @@ function Post() {
       const [drop,setDrop] = useState(false)
   return <>
      {/* Partie reserver au post de l'utilisateur */}
-      <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+      <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full my-8 md:mx-48 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-lg'>
             <div className='grow '>
                     <div className='w-full h-full grid-flow-col border bg-zinc-50'>
                         <div className='max-sm:w-full ' >
@@ -49,7 +49,7 @@ function Post() {
                                    </div>
                                     
                                     {drop  &&(
-                                        <div className=' p-2 bg-white rounded right-10 top-7 border '>
+                                        <div className='p-2 bg-white border rounded right-10 top-7'>
                                             <div className='p-2'>
                                                 <i class="fa-regular fa-bookmark text-[#3F87F5] px-2"></i>
                                                 <span>Ajouter un favoris</span>
@@ -58,7 +58,6 @@ function Post() {
                                                 <i class="fa-solid fa-trash text-red-600 px-2"></i>
                                                 <span className='text-red-600' >Supprimer</span>
                                             </div>
-
                                         </div>
                                     )}                          
                                     <div className=''>
@@ -105,7 +104,7 @@ function Post() {
                 </div>
             </div>    
      </section>
-      <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+      <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-lg'>
             <div className='grow '>
                     <div className='w-full h-full grid-flow-col border bg-zinc-50'>
                         <div className='max-sm:w-full ' >
@@ -121,7 +120,7 @@ function Post() {
                                         </div>
                                    </div>
                                     {drop  &&(
-                                        <div className=' p-2 bg-white rounded right-10 top-7 border '>
+                                        <div className='p-2 bg-white border rounded right-10 top-7'>
                                             <div className='p-2'>
                                                 <i class="fa-regular fa-bookmark text-[#3F87F5] px-2"></i>
                                                 <span>Ajouter un favoris</span>
@@ -238,7 +237,7 @@ function Post() {
                     </div>
             </div>
      </section>
-     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-lg'>
             <div className='grow '>
                     <div className='w-full h-full grid-flow-col border bg-zinc-50'>
                         <div className='max-sm:w-full ' >
@@ -299,7 +298,7 @@ function Post() {
                     </div>
             </div>
      </section>
-     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-lg'>
             <div className='grow '>
                     <div className='w-full h-full grid-flow-col border bg-zinc-50'>
                         <div className='max-sm:w-full ' >
@@ -360,7 +359,7 @@ function Post() {
                     </div>
             </div>
      </section>
-     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-lg'>
             <div className='grow '>
                     <div className='w-full h-full grid-flow-col border bg-zinc-50'>
                         <div className='max-sm:w-full ' >
@@ -421,7 +420,7 @@ function Post() {
                     </div>
             </div>
      </section>
-     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-lg'>
             <div className='grow '>
                     <div className='w-full h-full grid-flow-col border bg-zinc-50'>
                         <div className='max-sm:w-full ' >
@@ -482,7 +481,7 @@ function Post() {
                     </div>
             </div>
      </section>
-     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 hover:touch-pinch-zoom'>
+     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-lg'>
             <div className='grow '>
                     <div className='w-full h-full grid-flow-col border bg-zinc-50'>
                         <div className='max-sm:w-full ' >
