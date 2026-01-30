@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../users/Navbar'
 
@@ -35,102 +34,19 @@ function Suggestion() {
             </div>
             <div className='border border-blue-100  md:mx-40 p-10  max-sm:mx-0 '>
                 <div className='grid grid-cos-1 max-sm:grid-cols-1  sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-6'>
-                    <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
-                        <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
-                        <span className='text-center my-4 font-semibold '>Morel</span>
-                        <button className='rounded-md px-10 py-2  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
-                            <i className="fa-solid fa-user"></i>
-                             Ajouter
-                        </button>
-                    </div>
-                    <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
-                        <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
-                        <span className='text-center my-4 font-semibold'>Morel</span>
-                        <button className='rounded-md px-10 py-2  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
-                            <i className="fa-solid fa-user"></i>
-                             Ajouter
-                        </button>
-                    </div>
-                    <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
-                        <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
-                        <span className='text-center my-4 font-semibold'>Morel</span>
-                        <button className='rounded-md px-10 py-2  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
-                            <i className="fa-solid fa-user"></i>
-                             Ajouter
-                        </button>
-                    </div>
-                    <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
-                        <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
-                        <span className='text-center my-4 font-semibold'>Morel</span>
-                        <button className='rounded-md px-10 py-2  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
-                            <i className="fa-solid fa-user"></i>
-                             Ajouter
-                        </button>
-                    </div>
-                    <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
-                        <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
-                        <span className='text-center my-4 font-semibold'>Morel</span>
-                        <button className='rounded-md px-10 py-2  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
-                            <i className="fa-solid fa-user"></i>
-                             Ajouter
-                        </button>
-                    </div>
-                    <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
-                        <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
-                        <span className='text-center my-4 font-semibold'>Morel</span>
-                        <button className='rounded-md px-10 py-2  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
-                            <i className="fa-solid fa-user"></i>
-                             Ajouter
-                        </button>
-                    </div>
-                    <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
-                        <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
-                        <span className='text-center my-4 font-semibold'>Morel</span>
-                        <button className='rounded-md px-10 py-2  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
-                            <i className="fa-solid fa-user"></i>
-                             Ajouter
-                        </button>
-                    </div>
-                    <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
-                        <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
-                        <span className='text-center my-4 font-semibold'>Morel</span>
-                        <button className='rounded-md px-10 py-2  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
-                            <i className="fa-solid fa-user"></i>
-                             Ajouter
-                        </button>
-                    </div>
-                    <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
-                        <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
-                        <span className='text-center my-4 font-semibold'>Morel</span>
-                        <button className='rounded-md px-10 py-2  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
-                            <i className="fa-solid fa-user"></i>
-                             Ajouter
-                        </button>
-                    </div>
-                    <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
-                        <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
-                        <span className='text-center my-4 font-semibold'>Morel</span>
-                        <button className='rounded-md px-10 py-2  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
-                            <i className="fa-solid fa-user"></i>
-                             Ajouter
-                        </button>
-                    </div>
-                    <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
-                        <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
-                        <span className='text-center my-4 font-semibold'>Morel</span>
-                        <button className='rounded-md px-10 py-2 min-w-full  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
-                            <i className="fa-solid fa-user"></i>
-                             Ajouter
-                        </button>
-                    </div>
-                    <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
-                        <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
-                        <span className='text-center my-4 font-semibold'>Morel</span>
-                        <button className='rounded-md px-10 py-2  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
-                            <i className="fa-solid fa-user"></i>
-                             Ajouter
-                        </button>
-                    </div>
+                    <CardAmis nom="lea" lien="https://i.pravatar.cc/150?img=9"/>
+                   <CardAmis nom="Paul" lien="https://i.pravatar.cc/150?img=10"/>
+                   <CardAmis nom="Marie" lien="https://i.pravatar.cc/150?img=11"/>
+                   <CardAmis nom="Sophie" lien="https://i.pravatar.cc/150?img=12"/> 
+                   <CardAmis nom="Lucas" lien="https://i.pravatar.cc/150?img=13"/>
+                   <CardAmis nom="Emma" lien="https://i.pravatar.cc/150?img=14"/>
+                   <CardAmis nom="Noah" lien="https://i.pravatar.cc/150?img=15"/>
+                   <CardAmis nom="Olivia" lien="https://i.pravatar.cc/150?img=16"/>
+                  <CardAmis nom="Liam" lien="https://i.pravatar.cc/150?img=17"/>
+                  <CardAmis nom="Ava" lien="https://i.pravatar.cc/150?img=18"/>
+                  <CardAmis nom="Ethan" lien="https://i.pravatar.cc/150?img=19"/>
+                  <CardAmis nom="Isabella" lien="https://i.pravatar.cc/150?img=20"/>
+                  
                 </div>
             </div>
             
@@ -142,3 +58,17 @@ function Suggestion() {
 }
 
 export default Suggestion
+
+
+ function CardAmis({nom,lien}){
+      return(
+         <div className='grid border bg-white rounded-md shadow-md p-8 place-content-center overflow-hidden '>
+                        <img src={lien} alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
+                        <span className='text-center my-4 font-semibold '>{nom}</span>
+                        <button className='rounded-md px-10 py-2  bg-blue-600 text-white flex gap-3 items-center my-4 hover:bg-blue-700 transition-all'>
+                            <i className="fa-solid fa-user"></i>
+                             Ajouter
+                        </button>
+                    </div>
+      )
+}

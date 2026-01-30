@@ -9,7 +9,7 @@ function Sidebar() {
       {/* Profil user */}
     
           <div className='grid place-content-center overflow-hidden border-b border-gray-200 mb-6 pb-6 '>
-              <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
+              <img src="https://i.pravatar.cc/150?img=13" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
               <span className='text-center my-2 font-bold text-sm'>Morel</span>
               <span className='text-center text-gray-400 text-xs'>moreltiamo@gmail.com</span>
           </div>
@@ -46,7 +46,7 @@ function Sidebar() {
         </li>
 
         <li className="p-2">
-          <Link to="#" className="flex items-center gap-3 px-4">
+          <Link to="/" className="flex items-center gap-3 px-4">
             <i className="fa-regular fa-bell text-[#53535f]"></i>
             <span className="text-[#53535f] hover:text-black">Notifications</span>
             <span className="w-6 ml-auto text-sm text-center text-white bg-red-500 rounded-md">
@@ -73,12 +73,12 @@ function Sidebar() {
           {dropDown && (
             <ul className="absolute bg-white border rounded-md shadow-lg left-4 top-10 w-60">
               <li>
-                <Link to="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" >
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" >
                   Compte
                 </Link>
               </li>
               <li>
-                <Link to="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" >
+                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" >
                   Confidentialité
                 </Link>
               </li>

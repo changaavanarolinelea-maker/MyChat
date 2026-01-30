@@ -44,7 +44,7 @@ function Profit() {
                     {/* LEFT PART */}
                     <div className="flex flex-col items-center w-full gap-6 p-6 md:flex-row md:w-2/3 text-sm ">
                         <img
-                        src=""
+                        src="https://i.pravatar.cc/150?img=67"
                         alt="profile"
                         className="object-cover w-40 h-40 border-4 rounded-full"
                         />

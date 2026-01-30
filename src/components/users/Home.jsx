@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+
 import Navbar from './Navbar'
 import myImag from '../../images/photo_2024-11-26_10-29-53.jpg'
 import Post from '../post/Post'
-import Profit from '../profits/Profit'
-import SearchBar from './SearchBar'
+
 
 function Home() {
 
