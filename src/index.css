@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 
+
+
+  
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -72,3 +75,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+<<<<<<< HEAD
+
+body{
+  background-color: rgb(255, 255, 250);
+}
+
+=======
+>>>>>>> fcc09d0eefc9d6d8c19e9d1b4c52ea69901ffe0a

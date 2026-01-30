@@ -23,7 +23,7 @@ function Sidebar() {
         </li>
 
         <li className="p-2">
-          <Link to="/users/modal" className="flex items-center gap-3 px-4">
+          <Link to="/users/message" className="flex items-center gap-3 px-4">
             <i className="fa-regular fa-comment text-[#53535f]"></i>
             <span className="text-[#53535f] hover:text-black">Messages</span>
           </Link>
