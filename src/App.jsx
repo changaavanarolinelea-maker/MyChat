@@ -9,6 +9,7 @@ import Message from './components/users/message'
 import Modal from './components/users/Modal'
 import Amis from './components/amis/Amis'
 import Suggestion from './components/amis/Suggestion'
+import Favoris from './components/amis/Favoris'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
              <Route path='/profits/profit' element ={<Profit/>}/>
              <Route path='/users/message' element={<Message/>}/>
              <Route path='/users/modal' element={<Modal/>}/>
+             <Route path='/users/favoris' element={<Favoris/>}/>
              <Route path='/amis/amis' element={<Amis/>}/>
              <Route path='/amis/suggestion' element={<Suggestion/>}/>
         </Routes>
