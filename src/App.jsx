@@ -1,25 +1,33 @@
 
-import Header from './app/pages/Header/header.jsx'
+
+
+
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+
 import './App.css'
+import Home from './components/users/home'
+import Profit from './components/profits/Profit'
+import Message from './components/users/message'
 
 function App() {
   
 
-  return (
-    
-    
-   <div className="min-h-screen"> 
-   
-     <Header  /> 
-    
-     <div className="pt-16 ">
-       <h2 className="text-xl font-bold">Contenu principal</h2> 
+ 
        
-       <p>Voici la partie principale de ton application.</p>
-        </div>
-     </div>
-      
     
+ 
+  return (
+    <>
+        <BrowserRouter>
+        <Routes>
+             
+             <Route path='/' element ={<Home/>} />
+             <Route path='/users/home' element ={<Home/>} />
+             <Route path='/profits/profit' element ={<Profit/>}/>
+             <Route path='/users/message' element={<Message/>}/>
+        </Routes>
+    </BrowserRouter>
+    </>
   )
 }
 
