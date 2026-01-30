@@ -204,8 +204,7 @@ const ConversationList = ({ conversations, currentUserId, selectedConversationId
   // Chercher dans le nom
   const nameMatch = otherUser?.nom.toLowerCase().includes(search);
    // Retourner true si on trouve dans le nom OU dans le message
-
-    const messageMatch = lastMessage?.contenu.toLowerCase().includes(search)
+   const messageMatch = lastMessage?.contenu.toLowerCase().includes(search);
 
    
   return nameMatch || messageMatch;
@@ -285,11 +284,13 @@ const MessageBubble = ({ message, isOwn }) => {
 
 const ChatWindow = ({ conversation, currentUserId, onSendMessage }) => {
   const [messageText, setMessageText] = useState('');
-  const messagesEndRef = useRef(null);
+  const messagesContainerRef = useRef(null);
 
   // Scroll automatique vers le bas quand nouveaux messages
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+   if (messagesContainerRef.current) {
+    messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+  }
   }, [conversation?.messages]);
 
   if (!conversation) {
@@ -348,7 +349,7 @@ const ChatWindow = ({ conversation, currentUserId, onSendMessage }) => {
       </div>
 
       {/* Zone des messages */}
-      <div className="flex-1 overflow-y-auto p-4 bg-gray-50">
+      <div ref={messagesContainerRef} className="flex-1 overflow-y-auto p-4 bg-gray-50">
         {conversation.messages.length === 0 ? (
           <div className="flex items-center justify-center h-full">
             <p className="text-gray-400">Aucun message. Commencez la conversation !</p>
@@ -362,7 +363,7 @@ const ChatWindow = ({ conversation, currentUserId, onSendMessage }) => {
                 isOwn={msg.expediteur_id === currentUserId}
               />
             ))}
-            <div ref={messagesEndRef} />
+            <div  />
           </>
         )}
       </div>
@@ -471,7 +472,7 @@ const ChatApp = () => {
   };
 
   return (
-    <div className="h-[80vh] flex bg-gray-100">
+    <div className="h-full w-full flex bg-gray-100">
       {/* Panneau gauche - Liste des conversations */}
       <ConversationList
         conversations={conversations}
@@ -492,52 +493,16 @@ const ChatApp = () => {
 
 
 
-
-
-// MessageContains.jsx
-//const MessageContains = () => {
-  //return (
-    //<div className="flex h-full w-full">
-      
-      //{/* SECTION GAUCHE */}
-      //<div className="w-[40%] p-6 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] scrollbar-hide">
-        //{/* Le div suivant force une hauteur légèrement supérieure pour permettre le swipe */}
-        //<div className="min-h-[101%]">
-          // <h2 className="font-bold mb-4">Messages</h2>
-           //{/* Ton contenu */}
-        //</div>
-      //</div>
-
-      //<div className="w-[1px] h-full bg-gray-100" />
-
-     // {/* SECTION DROITE */}
-      //<div className="w-[60%] p-6 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] bg-gray-50/20">
-        //<div className="min-h-[101%]">
-         //  <h2 className="font-bold mb-4">Discussion</h2>
-          // {/* Ton contenu */}
-        //</div>
-      //</div>
-
-    //</div>
- // );
-//}
-
-
-
-//
-
-
-
 function Message() {
 
   return <>
-   <div className="flex flex-col h-screen w-full bg-gray-50"> {/* Fond légèrement gris pour faire ressortir le blanc */}
+   <div className="flex flex-col h-screen w-full bg-gray-50 "> {/* Fond légèrement gris pour faire ressortir le blanc */}
        <Navbar/>
      
-<main className="flex-1 pt-20 lg:ml-64 p-6 transition-all duration-300">
+<main className="flex-1 pt-20 lg:ml-64 p-6 transition-all duration-300 overflow-hidden">
         
         {/* Le conteneur de ton composant avec des bords arrondis et une ombre */}
-        <div className="h-full w-full bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+        <div className="h-full w-full bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mx-4 ">
           <ChatApp />
         </div>
 

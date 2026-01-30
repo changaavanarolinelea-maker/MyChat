@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState ,useRef,useEffect} from 'react'
 import SearchBar from './SearchBar'
 import Logo from '../../images/logo.jpg'
 import ProImg from '../../images/photo_2024-11-26_10-29-53.jpg'
@@ -10,8 +10,29 @@ function Navbar() {
     const [close, setClose]=useState(true)
     const [open, setOpen] = useState(false)
     const [notice, setNotice] = useState(false)
+    const notificeRef = useRef(null)
+
+
+    useEffect(() => {
+
+        const handleClickOutside = (event) => {
+             if (notificeRef.current && !notificeRef.current.contains(event.target)) {
+        setNotice(false) // Fermer
+      }
+        }
+       if (notice) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+     return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [notice]); // Se déclenche quand isOpen change
+
+        
     
-  return <>
+    
+  return <div ref={notificeRef} className='relative'>
         <div className='fixed top-0 z-50 bg-white '>
            <img src={Logo} alt="" className='object-contain h-16 border w-72'/>
         </div>
@@ -28,7 +49,7 @@ function Navbar() {
 
                 {/* Right icons */}
                 <div className="flex items-center gap-6" >
-                    <div onClick={()=>setNotice(true)}>
+                    <div onClick={()=>setNotice(!notice)}>
                         <i className="text-xl text-gray-400 cursor-pointer fa-regular fa-bell hover:text-blue-500"/>
                         <span className='absolute w-5 ml-20 text-center text-white bg-red-500 rounded-full cursor-pointer top-1 right-16'>3</span>
                     </div>
@@ -126,7 +147,7 @@ function Navbar() {
             <Sidebar/>
             }
         </main>
-  </>
+  </div>
 }
 
 export default Navbar
