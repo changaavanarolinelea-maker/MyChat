@@ -177,7 +177,7 @@ function Post() {
                     </div>
             </div>
      </section>
-     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 antialiased'>
+     <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full my-8 md:mx-48 antialiased'>
             <div className='grow '>
                     <div className='w-full h-full grid-flow-col border bg-zinc-50'>
                         <div className='max-sm:w-full ' >

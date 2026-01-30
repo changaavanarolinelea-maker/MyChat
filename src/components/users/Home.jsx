@@ -20,7 +20,7 @@ function Home() {
                          </div>
                 </div>    
             </section> 
-            <section className='shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full p-6 my-8 mx-20 '>
+            <section className='shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full p-6 my-8 md:mx-48 '>
               <div className='grid w-full grid-flow-row'>
                     <div className='max-sm:w-full' >
                       <div className='flex w-auto'>
