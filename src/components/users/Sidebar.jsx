@@ -5,7 +5,16 @@ function Sidebar() {
   const [dropDown, setDropDown] = useState(false);
 
   return (
-    <aside className="fixed h-full bg-white border-r shadow-md top-10 w-72 py-36 max-lg:hidden">
+    <aside className="fixed h-full bg-white border-r shadow-md top-10 w-72 py-20 max-lg:hidden">
+      {/* Profil user */}
+    
+          <div className='grid place-content-center overflow-hidden border-b border-gray-200 mb-6 pb-6 '>
+              <img src="" alt="" className='w-16 h-16 rounded-full border-2 border-gray-400 mx-auto' />
+              <span className='text-center my-2 font-bold text-sm'>Morel</span>
+              <span className='text-center text-gray-400 text-xs'>moreltiamo@gmail.com</span>
+          </div>
+      
+
       <ul className="flex flex-col">
 
         <li className="p-2 active">
@@ -30,7 +39,7 @@ function Sidebar() {
         </li>
 
         <li className="p-2">
-          <Link to="/users/modal" className="flex items-center gap-3 px-4">
+          <Link to="/users/favoris" className="flex items-center gap-3 px-4">
             <i className="fa-regular fa-star text-[#53535f]"></i>
             <span className="text-[#53535f] hover:text-black">Favoris</span>
           </Link>

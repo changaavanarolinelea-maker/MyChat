@@ -10,7 +10,7 @@ function Home() {
   return <>
        <Navbar/>
       <main className=' my-28 mx-8 max-sm:w-auto md:ml-[20vw] md:w-[75vw]'>
-           <section className=' shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full'>
+           <section className=' shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full bg-white'>
                 <div className='grid grid-flow-row p-6'>
                          <h5 className='py-2 font-bold'>Verifier votre compte</h5>
                          <p className='py-2 text-gray-400 '>verifier votre adresse email pour recevoir les notifications directement dans votre boite mail</p>
@@ -20,12 +20,12 @@ function Home() {
                          </div>
                 </div>    
             </section> 
-            <section className='shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full p-6 my-8 md:mx-48 '>
+            <section className='shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full p-6 my-8 md:mx-48 bg-white'>
               <div className='grid w-full grid-flow-row'>
                     <div className='max-sm:w-full' >
                       <div className='flex w-auto'>
                           <img src={myImag} alt="" className='object-cover w-10 h-10 p-1 rounded-full' />
-                          <a href="" className='w-full px-3 py-2 mx-auto font-semibold text-center text-gray-400 bg-gray-50 hover:bg-gray-300 text-md grow rounded-2xl'>Quoi de neuf ? Morel</a>
+                          <a href="" className='w-full px-3 py-2 mx-auto font-semibold text-center text-gray-400 bg-gray-100 hover:bg-gray-300 text-md grow rounded-2xl'>Quoi de neuf ? Morel</a>
                       </div>
                     </div>
                   </div>

@@ -9,7 +9,9 @@ import Modal from './components/users/Modal.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <div className='font-poppins'>
        <App/>
+    </div>
         
   </StrictMode>,
 )
