@@ -30,7 +30,7 @@ function Sidebar() {
         </li>
 
         <li className="p-2">
-          <Link to="#" className="flex items-center gap-3 px-4">
+          <Link to="/users/modal" className="flex items-center gap-3 px-4">
             <i className="fa-regular fa-star text-[#53535f]"></i>
             <span className="text-[#53535f] hover:text-black">Favoris</span>
           </Link>
@@ -47,7 +47,7 @@ function Sidebar() {
         </li>
 
         <li className="p-2">
-          <Link to="#" className="flex items-center gap-3 px-4">
+          <Link to="/amis/amis" className="flex items-center gap-3 px-4">
             <i className="fa-solid fa-users text-[#53535f]"></i>
             <span className="text-[#53535f] hover:text-black">Amis</span>
           </Link>
