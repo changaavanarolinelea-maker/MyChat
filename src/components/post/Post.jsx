@@ -1,7 +1,49 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Postpic from '../../images/photo_2024-11-26_10-29-53.jpg'
 
- const date = new Date()
+
+
+
+function Post() {
+
+    const [posts, setPosts] = useState([
+        { id:1, nom:"violletta", message:"Ceci est un message de test de violletta .", Postpic:"https://i.pravatar.cc/150?img=5"},
+        { id:2, nom:"Theresa", message:"Ceci est un message de test de theresa .", Postpic:"https://i.pravatar.cc/150?img=13"},
+        { id:3, nom:"Marie", message:"Ceci est un message de test de marie .", Postpic:Postpic},
+        { id:4, nom:"Lea", message:"Ceci est un message de test de lea .", Postpic:"https://i.pravatar.cc/150?img=15"},
+        { id:5, nom:"Classickid Morel", message:"Test oo", Postpic:Postpic},
+    ])
+   
+  return <>
+     
+  {posts.map((post) => (
+    <CardPost key={post.id} img={post.nom.substring(0,2)} nom={post.nom} message={post.message} Postpic={post.Postpic} />
+  ))}
+  </>
+  
+}
+
+export default Post
+
+
+
+
+
+
+
+function CardPost({img,nom,message,Postpic}) {
+     const [drop,setDrop] = useState(false)
+const [num, setNum] = useState(1)
+    const addEmojis = ()=>{
+        setNum ( num+1)
+    }
+
+     const [commentaire, setCommentaire] = useState(0)
+    const addComment = ()=>{
+        setCommentaire ( commentaire+1)
+    }
+
+    const date = new Date()
      const now = date.toLocaleDateString("fr-FR",{
        day : 'numeric',
        month: 'short',
@@ -14,34 +56,7 @@ import Postpic from '../../images/photo_2024-11-26_10-29-53.jpg'
         minute: '2-digit',
         second: '2-digit'
     })
-
-function Post() {
-    
-    const [num, setNum] = useState(1)
-    const addEmojis = ()=>{
-        setNum ( num+1)
-    }
-    const [commentaire, setCommentaire] = useState(0)
-    const addComment = ()=>{
-        setCommentaire ( commentaire+1)
-    }
       
-  return <>
-     
-  <CardPost img="VL" nom="violletta" message="Ceci est un message de test de violletta ." num={num} commentaire={commentaire} now={now} heure={heure} addComment={addComment} addEmojis={addEmojis} Postpic={"https://i.pravatar.cc/150?img=5"}  />                
-    <CardPost img="TH" nom="Theresa" message="Ceci est un message de test de theresa ." num={num} commentaire={commentaire} now={now} heure={heure} addComment={addComment} addEmojis={addEmojis} Postpic={"https://i.pravatar.cc/150?img=13"}  />
-     <CardPost img="Mr" nom="Marie" message="Ceci est un message de test de marie ." num={num} commentaire={commentaire} now={now} heure={heure} addComment={addComment} addEmojis={addEmojis} Postpic={Postpic}  />                
-    <CardPost img="Lea" nom="Lea" message="Ceci est un message de test de lea ." num={num} commentaire={commentaire} now={now} heure={heure} addComment={addComment} addEmojis={addEmojis} Postpic={"https://i.pravatar.cc/150?img=15"}  />
-     <CardPost img="CM" nom="Classickid Morel" message="Test oo" num={num} commentaire={commentaire} now={now} heure={heure} addComment={addComment} addEmojis={addEmojis} Postpic={Postpic}  />
-  </>
-  
-}
-
-export default Post
-
-
-function CardPost({img,nom,message,num,commentaire,now,heure,addComment,addEmojis,Postpic}) {
-     const [drop,setDrop] = useState(false)
     return(
       <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-lg'>
             <div className='grow '>

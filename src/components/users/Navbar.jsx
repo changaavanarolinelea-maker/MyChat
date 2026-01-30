@@ -1,4 +1,4 @@
-import React, { useState ,useRef,useEffect} from 'react'
+import  { useState ,useRef,useEffect} from 'react'
 import SearchBar from './SearchBar'
 import Logo from '../../images/logo.jpg'
 import ProImg from '../../images/photo_2024-11-26_10-29-53.jpg'
