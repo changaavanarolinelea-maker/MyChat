@@ -144,6 +144,13 @@ function Profit() {
                 </div>
             </section>
            
+            <section className='w-full mt-10 rounded-lg '>
+                <div className='flex flex-col items-center'>
+                   <p className='text-gray-400 font-semibold '>Vous n'aviez pas encore de publication </p>
+                     <button className='mt-4 mb-4 px-4 py-2  text-blue-600 border hover:text-neutral-950 rounded hover:bg-zinc-400 transition-all'>Créer une premiere publication</button>
+                </div>
+            </section>
+           
      </main>
 
         

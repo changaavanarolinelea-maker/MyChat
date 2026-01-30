@@ -58,7 +58,7 @@ function Navbar() {
                 </div>
             </nav>
              {open &&
-                 <div className='w-2/12 bg-white rounded shadow-md absolute right-9 px-5 border top-14 py-3' >
+                 <div className='w-2/12 bg-white rounded shadow-md absolute right-9 px-5 border top-14 py-3 max-sm:right-16 max-sm:w-60 max-sm:absolute' >
                     <div>
                         <div className='flex items-center gap-5 border-b-gray-200 border-b pb-3 '>
                              <img src={ProImg} alt="profile"  className="object-cover w-10 h-10 rounded-full" />

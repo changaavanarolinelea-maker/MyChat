@@ -8,7 +8,10 @@ export default {
     extend: {
        colors: {
         prima : "#3F87F5",
-      }
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
   },
   plugins: [],
