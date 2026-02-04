@@ -1,37 +1,12 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import Navbar from '../users/Navbar'
-import ProImg from '../../images/photo_2024-11-26_10-29-53.jpg'
+
 
 function Profit() {
    
-    const date = new Date()
-    const now = date.toLocaleDateString("fr-FR",{
-           day : 'numeric',
-           month: 'short',
-           year: '2-digit',
-         })
-        const time = new Date()
-        const heure = time.toLocaleTimeString("fr-FR", {
-            hour : '2-digit',
-            minute: '2-digit',
-            second: '2-digit'
-        })
+    const [isModalOpen, setIsModalOpen] = useState(false)
     
-        const [emojis, setEmojis] = useState([
-            { id:1, HAHA : '😂'},
-            { id:2, ANGRY:'😡'},
-            { id:3, SAD : '🥺'},
-            { id:4, LIKE : '👍'}
-    
-        ])
-        const [num, setNum] = useState(1)
-        const addEmojis = ()=>{
-            setNum ( num+1)
-        }
-        const [commentaire, setCommentaire] = useState(0)
-        const addComment = ()=>{
-            setCommentaire ( commentaire+1)
-        }
+      
         
   return <div >
         
@@ -57,9 +32,13 @@ function Profit() {
                             <button className="p-2 rounded-sm text-[#3f87f5] bg-[#3f87f51A] hover:text-white hover:bg-[#3f87f5]">
                             Contact
                             </button>
-                            <button className="p-2 rounded-sm text-[#886CFF] bg-[#886CFF1A] hover:text-white hover:bg-[#886CFF]">
+                            <button className="p-2 rounded-sm text-[#886CFF] bg-[#886CFF1A] hover:text-white hover:bg-[#886CFF]" onClick={() => setIsModalOpen(true)}>
                             Modifier
                             </button>
+                             <ProfileEditModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
                         </div>
                         </div>
                     </div>
@@ -159,3 +138,144 @@ function Profit() {
 }
 
 export default Profit
+
+
+
+
+const ProfileEditModal = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white w-full max-w-6xl mx-4 rounded-lg shadow-lg overflow-hidden">
+        {/* Header */}
+        <div className="border-b border-gray-300 px-6 py-4">
+          <h2 className="text-2xl font-semibold text-gray-800">Modifier le profil</h2>
+        </div>
+
+        {/* Body */}
+        <div className="p-6 max-h-[70vh] overflow-y-auto">
+          {/* Ligne 1: Nom complet, Nom d'utilisateur, Profession */}
+          <div className="grid grid-cols-3 gap-4 mb-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Nom complet
+              </label>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Entrez votre nom complet"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Nom d'utilisateur
+              </label>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Entrez votre nom d'utilisateur"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Profession
+              </label>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Entrez votre profession"
+              />
+            </div>
+          </div>
+
+          {/* Ligne 2: Email, Téléphone, Localisation */}
+          <div className="grid grid-cols-3 gap-4 mb-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Email
+              </label>
+              <input
+                type="email"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Entrez votre email"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Téléphone
+              </label>
+              <input
+                type="tel"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Entrez votre téléphone"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Localisation
+              </label>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Entrez votre localisation"
+              />
+            </div>
+          </div>
+
+          {/* Ligne 3: Liens sociaux, Spécialité */}
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Liens sociaux
+              </label>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Entrez vos liens sociaux"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Spécialité
+              </label>
+              <input
+                type="text"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Entrez votre spécialité"
+              />
+            </div>
+          </div>
+
+          {/* Ligne 4: Bio (pleine largeur) */}
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Bio
+            </label>
+            <textarea
+              rows="4"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Parlez-nous de vous..."
+            />
+          </div>
+        </div>
+
+        {/* Footer avec boutons */}
+        <div className="border-t border-gray-300 px-6 py-4 flex justify-end gap-3">
+          <button
+            onClick={onClose}
+            className="px-6 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
+          >
+            Annuler
+          </button>
+          <button
+            className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+          >
+            Enregistrer
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+

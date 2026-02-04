@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Sidebar() {
   const [dropDown, setDropDown] = useState(false);
 
   return (
-    <aside className="fixed h-full bg-white border-r shadow-md top-10 w-72 py-20 max-lg:hidden">
+    <aside className="fixed h-full bg-white border-r shadow-md top-10 w-72 py-20 ">
       {/* Profil user */}
     
           <div className='grid place-content-center overflow-hidden border-b border-gray-200 mb-6 pb-6 '>
@@ -73,12 +73,12 @@ function Sidebar() {
           {dropDown && (
             <ul className="absolute bg-white border rounded-md shadow-lg left-4 top-10 w-60">
               <li>
-                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" >
+                <Link to="/users/comptes" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" >
                   Compte
                 </Link>
               </li>
               <li>
-                <Link to="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" >
+                <Link to="/users/confidentialite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" >
                   Confidentialité
                 </Link>
               </li>

@@ -10,6 +10,8 @@ import Modal from './components/users/Modal'
 import Amis from './components/amis/Amis'
 import Suggestion from './components/amis/Suggestion'
 import Favoris from './components/amis/Favoris'
+import AccountSettings from './components/users/compte'
+import Confidentialite from './components/users/confidentialite'
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
              <Route path='/users/favoris' element={<Favoris/>}/>
              <Route path='/amis/amis' element={<Amis/>}/>
              <Route path='/amis/suggestion' element={<Suggestion/>}/>
+              <Route path='/users/comptes' element={<AccountSettings/>}/>
+              <Route path='/users/confidentialite' element={<Confidentialite/>}/>
         </Routes>
     </BrowserRouter>
    

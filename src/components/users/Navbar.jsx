@@ -7,7 +7,7 @@ import Button from './Button'
 
 
 function Navbar() {
-    const [close, setClose]=useState(true)
+    const [close, setClose]=useState(false)
     const [open, setOpen] = useState(false)
     const [notice, setNotice] = useState(false)
     const notificeRef = useRef(null)
@@ -33,14 +33,18 @@ function Navbar() {
     
     
   return <div ref={notificeRef} className='relative'>
-        <div className='fixed top-0 z-50 bg-white '>
+        <div className='fixed top-0 z-70 bg-white '>
            <img src={Logo} alt="" className='object-contain h-16 border w-72'/>
         </div>
-        <header className="fixed top-0 left-0 right-0 z-50 h-16 bg-white border-b shadow md:left-72" >
+        <header className="fixed top-0 left-0 right-0 z-70 h-16 bg-white border-b shadow md:left-72" >
             <nav className="flex items-center justify-between h-full px-4">
 
                 {/* Burger (mobile only) */}
-                <i className="text-2xl text-gray-500 cursor-pointer fa-solid fa-bars md:hidden" onClick={()=>setClose(!close)}/>
+              <i className="text-2xl text-gray-500 cursor-pointer fa-solid fa-bars md:hidden" onClick={()=>setClose(!close)}/>
+                    {close &&<div className="fixed top-0 left-0 z-50 h-screen">
+                                      <Sidebar/>
+                                       </div>
+                    }
 
                 {/* Search */}
                 <div className="">
@@ -49,11 +53,13 @@ function Navbar() {
 
                 {/* Right icons */}
                 <div className="flex items-center gap-6" >
-                    <div onClick={()=>setNotice(!notice)}>
+                    <div onClick={()=>{setNotice(!notice)
+                     
+                    }}>
                         <i className="text-xl text-gray-400 cursor-pointer fa-regular fa-bell hover:text-blue-500"/>
                         <span className='absolute w-5 ml-20 text-center text-white bg-red-500 rounded-full cursor-pointer top-1 right-16'>3</span>
                     </div>
-                    <img src={ProImg} alt="profile"  className="object-cover w-10 h-10 rounded-full" onClick={()=>setOpen(true)}/>
+                    <img src={ProImg} alt="profile"  className="object-cover w-10 h-10 rounded-full" onClick={()=>setOpen(!open)}/>
                   
                 </div>
             </nav>
@@ -142,10 +148,10 @@ function Navbar() {
             
         </header>
       
-        <main onClick={()=>setOpen(false)}>
-            {close &&
+        <main className='hidden md:block'>
+         
             <Sidebar/>
-            }
+    
         </main>
   </div>
 }
