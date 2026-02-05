@@ -6,6 +6,7 @@ import Sidebar from './Sidebar'
 import Button from './Button'
 
 
+
 function Navbar() {
     const [close, setClose]=useState(false)
     const [open, setOpen] = useState(false)

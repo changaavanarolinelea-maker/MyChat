@@ -2,6 +2,7 @@
 import Navbar from './Navbar'
 import myImag from '../../images/photo_2024-11-26_10-29-53.jpg'
 import Post from '../post/Post'
+import {Link} from 'react-router-dom'
 
 
 function Home() {
@@ -24,7 +25,7 @@ function Home() {
                     <div className='max-sm:w-full' >
                       <div className='flex w-auto'>
                           <img src={myImag} alt="" className='object-cover w-10 h-10 p-1 rounded-full' />
-                          <a href="" className='w-full px-3 py-2 mx-auto font-semibold text-center text-gray-400 bg-gray-100 hover:bg-gray-300 text-md grow rounded-2xl'>Quoi de neuf ? Morel</a>
+                          <Link to="/users/home" className='w-full px-3 py-2 mx-auto font-semibold text-center text-gray-400 bg-gray-100 hover:bg-gray-300 text-md grow rounded-2xl'>Quoi de neuf ? Morel</Link>
                       </div>
                     </div>
                   </div>

@@ -58,7 +58,7 @@ const [num, setNum] = useState(1)
     })
       
     return(
-      <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-100 hover:shadow-lg'>
+      <section className='flex justify-center shadow-md rounded-lg border max-sm:mx-[8px] max-sm:w-full  my-8 md:mx-48 transition delay-150 duration-300 ease-in-out '>
             <div className='grow '>
                     <div className='w-full h-full grid-flow-col border bg-zinc-50'>
                         <div className='max-sm:w-full ' >

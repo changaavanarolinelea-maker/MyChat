@@ -1,11 +1,18 @@
 import  { useState } from "react";
 import { Link } from "react-router-dom";
 
+
+// const Navbar = ({isActive}) =>{`
+
+//   `
+  
+// }
+
 function Sidebar() {
   const [dropDown, setDropDown] = useState(false);
 
   return (
-    <aside className="fixed h-full bg-white border-r shadow-md top-10 w-72 py-20 ">
+    <aside className="fixed h-full bg-white border-r shadow-md top-[4.1em] w-72 py-20 z-20">
       {/* Profil user */}
     
           <div className='grid place-content-center overflow-hidden border-b border-gray-200 mb-6 pb-6 '>
